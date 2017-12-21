@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title> Addressbook Jorik </title>
+
+        <meta charset="utf-8">
+
+        <style type="text/css">
+	body {background-color: powderblue;
+	position: absolute;
+        left: 35%;
+    	top: 40%;
+    	width: 100%;
+    	text-align: center;}
+	#addressbook {width:400px;}
+	#addressbook td, th {
+   	border:1px solid blue;
+   	padding:5px 10px;}
+	th {color: black;
+  	font-family: courier;
+    	font-size: 160%;}
+	td {color: black;}
+        </style>
+    </head>
+
+    <body>
+        <table id="addressbook">
+        <tr>
+       	    <th> Addressbook 
+	    </th>
+        </tr>
+
+	<tr>
+            <td><span id="output">&nbsp;</span>
+	    </td>
+    	</tr>
+    	
+        <tr>
+            <td>
+            <input type="button" value="add contact" onClick="addcontact()" />
+	    <input type="button" value="remove contact" onClick="removecontact()"/>
+  	    <input type="button" value="remove last contact" onClick="removelastcontact()" />
+  	    <input type="button" value="remove first contact" onClick="removefirstcontact()" />
+            <input type="button" value="show" onClick="listContacts()" />
+	    <input type="button" value="edit contact" onClick="editcontact()" />
+            </td>
+    	</tr>
+        </table>
+
+    <script>
+    var contacts = [];
+
+	function addcontact() {
+    	var person = {
+            firstName: prompt("firstname", ""),
+            lastName: prompt("lastname", ""),
+            address: prompt("address", ""),
+            phoneNumber: prompt("phonenumber", "")
+            };
+        contacts.push(person);}
+
+	function editcontact() {
+	var editNum = prompt("Please enter the contact number to edit", "");
+	var editIndex = editNum -1;
+	contacts[editIndex] = {
+            firstName: prompt("firstname", ""),
+            lastName: prompt("lastname", ""),
+            address: prompt("address", ""),
+            phoneNumber: prompt("phonenumber", "")
+            }; 
+	}
+
+	function removecontact() {
+	var removeNum = prompt("Please enter the contact number to remove", "");
+	var removeIndex = removeNum -1;
+        contacts.splice(removeIndex, 1);    
+	}
+
+	function removelastcontact() {
+	contacts.pop();
+	}
+
+	function removefirstcontact() {
+	contacts.shift();
+	}
+
+	function resetView() {
+    	document.getElementById("output").innerHTML = "";
+	}
+
+	function printPerson(person) {
+    	document.getElementById("output").innerHTML +=
+        person.firstName + " * " +
+        person.lastName + " * " +
+        person.address + " * " +
+        person.phoneNumber + "<br />";
+	}
+
+	function listContacts() {
+    	resetView();
+    	var len = contacts.length;
+    	for (x = 0; x < len; x++) {
+            printPerson(contacts[x]);
+    	    }
+	}
+    </script>
+    </body>
+
+</html>
