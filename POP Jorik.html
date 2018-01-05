@@ -6,6 +6,11 @@
 	<meta charset="utf-8">
 
         <style type="text/css">
+	input[type=button] {
+   	background-color: red;
+	font-size:16px;
+	}
+
 	body {background-color: rgb(60, 60, 60);}
 	
 	a:link {
@@ -36,13 +41,13 @@
 	   
 	.image1 {position: absolute;
     	     left: 200px;
-    	     top: 380px;
+    	     top: 420px;
 	     float:left;
 	     border: 4px solid red;}
 
 	.image2 {position: absolute;
     	     left: 810px;
-    	     top: 380px;
+    	     top: 420px;
 	     float:right;
 	     border: 4px solid red;}
 
@@ -50,6 +55,13 @@
     </head>
 
    <body>
+	<input type="button" value="Start" onClick="gotoStart ()" />
+	<input type="button" value="Addressbook assignment Jorik" onClick="gotoAddressbook ()" />
+	<input type="button" value="CV Jorik" onClick="gotoCV ()" />
+	<input type="button" value="Master Thesis Jorik 2016" onClick="gotoMasterThesis ()" />
+	<input type="button" value="Bachelor Thesis Jorik 2014" onClick="gotoBachelorThesis ()" />
+	<input type="button" value="CodeGorilla planning week 50 Jorik" onClick="gotoPlanningweek50 ()" />
+	<input type="button" value="Hobby's: games & films" onClick="gotoHobbys ()" />
 
 	<h1 style="color:rgb(255, 255, 255);"> Persoonlijk ontwikkelingsplan Jorik de Boer </h1>
 	<p style="color:rgb(255, 255, 255);"> In april heb ik mijn Master 
@@ -99,7 +111,29 @@
 	Realistisch
 	Tijdgebonden
 	-->
+
     	<script>
+	function gotoStart() {
+        location.href = "Jorik's portfolio.html"}
+
+	function gotoAddressbook() {
+        location.href = "Addressbook Jorik version 2.html"}
+
+	function gotoCV() {
+	location.href="CV Jorik de Boer.pdf"}
+
+	function gotoMasterThesis() {
+	location.href="Master Thesis Jorik de Boer.pdf"}
+
+	function gotoBachelorThesis() {
+	location.href="Bachelor Thesis Jorik de Boer.pdf"}
+
+	function gotoPlanningweek50() {
+	location.href="CodeGorilla reflectie en planning Jorik de Boer.pdf"}
+	
+	function gotoHobbys() {
+        location.href = "Hobbys Jorik.html"}
+
   	</script>
     </body>
 

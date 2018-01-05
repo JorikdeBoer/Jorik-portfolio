@@ -6,6 +6,11 @@
 	<meta charset="utf-8">
 
         <style type="text/css">
+	input[type=button] {
+   	background-color: red;
+	font-size:16px;
+	}
+
 	body {background-color: rgb(60, 60, 60);}
 
 	a:link {
@@ -36,14 +41,14 @@
 
 	.image1 {position: absolute;
     	     left: 400px;
-    	     top: 425px;
+    	     top: 460px;
    	     z-index: -1;
 	     float:left;
 	     border: 4px solid red;}
 
 	.image2 {position: absolute;
     	     left: 750px;
-    	     top: 425px;
+    	     top: 460px;
    	     z-index: -1;
 	     float:center;
 	     border: 4px solid red;}
@@ -52,7 +57,14 @@
     </head>
 
    <body>
-	
+	<input type="button" value="Start" onClick="gotoStart ()" />	
+	<input type="button" value="Addressbook assignment Jorik" onClick="gotoAddressbook ()" />
+	<input type="button" value="CV Jorik" onClick="gotoCV ()" />
+	<input type="button" value="Master Thesis Jorik 2016" onClick="gotoMasterThesis ()" />
+	<input type="button" value="Bachelor Thesis Jorik 2014" onClick="gotoBachelorThesis ()" />
+	<input type="button" value="CodeGorilla planning week 50 Jorik" onClick="gotoPlanningweek50 ()" />
+	<input type="button" value="Persoonlijk Ontwikkelingsplan Jorik" onClick="gotoPOP ()" />
+
 	<h1 style="color:rgb(255, 255, 255);"> Hobby's Jorik de Boer </h1>
 	<p style="color:rgb(255, 255, 255);">  Mijn hobby's zijn in drie delen te onderscheiden: games, films & overige. <br> 
     	Games speelde ik in het verleden op de Playstation 2 & 3 en nu op de Playstation 4. <br> 
@@ -74,7 +86,28 @@
 	<img src="AminoAcidFighterMenu.png" class="image1" alt="Start menu amino acid fighter" style="width:300px;height:315px;">
 	<img src="AminoAcidFighterGame2.png" class="image2" alt="amino acid fighter game" style="width:300px;height:315px;">
 
-	<script> 
+	<script>
+	function gotoStart() {
+        location.href = "Jorik's portfolio.html"}
+
+	function gotoAddressbook() {
+        location.href = "Addressbook Jorik version 2.html"}
+
+	function gotoCV() {
+	location.href="CV Jorik de Boer.pdf"}
+
+	function gotoMasterThesis() {
+	location.href="Master Thesis Jorik de Boer.pdf"}
+
+	function gotoBachelorThesis() {
+	location.href="Bachelor Thesis Jorik de Boer.pdf"}
+
+	function gotoPlanningweek50() {
+	location.href="CodeGorilla reflectie en planning Jorik de Boer.pdf"}
+
+	function gotoPOP() {
+        location.href = "POP Jorik.html"}
+ 
   	</script>
     </body>
 

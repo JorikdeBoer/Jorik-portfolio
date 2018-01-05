@@ -6,6 +6,11 @@
 	<meta charset="utf-8">
 
         <style type="text/css">
+	input[type=button] {
+   	background-color: red;
+	font-size:16px;
+	}
+
 	body {background-color: rgb(60, 60, 60);}
 
 	a:link {
@@ -36,7 +41,7 @@
 
 	.image1 {position: absolute;
     	     left: 350px;
-    	     top: 380px;
+    	     top: 420px;
    	     z-index: -1;
 	     float:left;
 	     border: 4px solid red;}
@@ -45,6 +50,15 @@
     </head>
 
    <body>
+	<input type="button" value="Start" onClick="gotoStart ()" />
+	<input type="button" value="Addressbook assignment Jorik" onClick="gotoAddressbook ()" />
+	<input type="button" value="CV Jorik" onClick="gotoCV ()" />
+	<input type="button" value="Master Thesis Jorik 2016" onClick="gotoMasterThesis ()" />
+	<input type="button" value="Bachelor Thesis Jorik 2014" onClick="gotoBachelorThesis ()" />
+	<input type="button" value="CodeGorilla planning week 50 Jorik" onClick="gotoPlanningweek50 ()" />
+	<input type="button" value="Persoonlijk Ontwikkelingsplan Jorik" onClick="gotoPOP ()" />
+	<input type="button" value="Hobby's" onClick="gotoHobbys ()" />
+
 	<h1 style="color:rgb(255, 255, 255);"> Jorik & Gamekings </h1>
 	<p style="color:rgb(255, 255, 255);"> Hieronder vind je de afleveringen van "Brievenmaandag" met een brief van mij & de kerst stream waarin ik games kreeg!
 	Klik op de links en skip naar de tijdslots om mijn inbreng te zien! <br>
@@ -60,6 +74,31 @@
 	<img src="Gamekings Brievenmaandag.png" class="image1" alt="Brievenmaandag 20 februari" style="width:800px;height:450px;">
 
     	<script>
+	function gotoStart() {
+        location.href = "Jorik's portfolio.html"}
+
+
+	function gotoAddressbook() {
+        location.href = "Addressbook Jorik version 2.html"}
+
+	function gotoCV() {
+	location.href="CV Jorik de Boer.pdf"}
+
+	function gotoMasterThesis() {
+	location.href="Master Thesis Jorik de Boer.pdf"}
+
+	function gotoBachelorThesis() {
+	location.href="Bachelor Thesis Jorik de Boer.pdf"}
+
+	function gotoPlanningweek50() {
+	location.href="CodeGorilla reflectie en planning Jorik de Boer.pdf"}
+
+	function gotoPOP() {
+        location.href = "POP Jorik.html"}
+	
+	function gotoHobbys() {
+        location.href = "Hobbys Jorik.html"}
+
   	</script>
     </body>
 
